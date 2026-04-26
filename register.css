@@ -1,0 +1,84 @@
+/* REGISTER PAGE */
+.register-body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#f8fafc;
+}
+
+/* CONTAINER */
+.register-container{
+    width:100%;
+    max-width:420px;
+    padding:20px;
+}
+
+/* FORM CARD */
+.register-form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    padding:35px;
+    border-radius:16px;
+    background:white;
+    border:1px solid #eee;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.register-form h2{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+/* SUBTEXT */
+.register-form p{
+    text-align:center;
+    font-size:14px;
+    color:#555;
+}
+
+/* INPUTS */
+.register-form input{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    outline:none;
+    transition:0.2s;
+}
+
+/* FOCUS EFFECT */
+.register-form input:focus{
+    border-color:#0ea5e9;
+    box-shadow:0 0 0 3px rgba(14,165,233,0.2);
+}
+
+/* BUTTON */
+.register-form button{
+    padding:12px;
+    border:none;
+    background:#0ea5e9;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.2s;
+}
+
+
+/* BUTTON HOVER */
+.register-form button:hover{
+    background:#0284c7;
+}
+
+.register-form button>a{
+    color: white;
+    text-decoration: none;
+}
+
+/* LINK */
+.register-form a{
+    color:#0ea5e9;
+    text-decoration:none;
+}

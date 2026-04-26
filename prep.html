@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparation</title>
+
+    <link rel="stylesheet" href="prep.css">
+    <link rel="stylesheet" href="logout.css">
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>PrepTrack</h2>
+
+    <nav>
+        <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+        <a href="job-tracker.html"><i class="fa-solid fa-briefcase"></i> Jobs</a>
+        <a href="#" class="active"><i class="fa-solid fa-book"></i> Preparation</a>
+        <a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+    </nav>
+
+    <div class="logout">
+        <a href="#logoutModal"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <h1>Preparation Tracker</h1>
+    </header>
+
+    <!-- SECTION -->
+    <section class="prep-container">
+
+        <!-- DSA -->
+        <article class="prep-card">
+            <h2>DSA</h2>
+
+            <div class="progress">
+                <div class="bar" style="width:60%"></div>
+            </div>
+            <p class="percent">60% Completed</p>
+
+            <ul>
+                <li><input type="checkbox" checked> Arrays</li>
+                <li><input type="checkbox" checked> Strings</li>
+                <li><input type="checkbox"> Linked List</li>
+                <li><input type="checkbox"> Trees</li>
+            </ul>
+        </article>
+
+        <!-- APTITUDE -->
+        <article class="prep-card">
+            <h2>Aptitude</h2>
+
+            <div class="progress">
+                <div class="bar" style="width:40%"></div>
+            </div>
+            <p class="percent">40% Completed</p>
+
+            <ul>
+                <li><input type="checkbox" checked> Quantitative</li>
+                <li><input type="checkbox"> Logical</li>
+                <li><input type="checkbox"> Verbal</li>
+            </ul>
+        </article>
+
+        <!-- CORE -->
+        <article class="prep-card">
+            <h2>Core Subjects</h2>
+
+            <div class="progress">
+                <div class="bar" style="width:70%"></div>
+            </div>
+            <p class="percent">70% Completed</p>
+
+            <ul>
+                <li><input type="checkbox" checked> DBMS</li>
+                <li><input type="checkbox" checked> OS</li>
+                <li><input type="checkbox"> CN</li>
+                <li><input type="checkbox" checked> SQL</li>
+            </ul>
+        </article>
+
+    </section>
+
+    <!-- Time Track -->
+    <section class="time-tracking">
+
+        <!-- TODAY TASKS -->
+        <article class="today">
+            <h2>Today's Plan</h2>
+
+            <ul>
+                <li><input type="checkbox"> Solve 5 DSA questions</li>
+                <li><input type="checkbox"> Revise DBMS</li>
+                <li><input type="checkbox"> Practice Aptitude</li>
+            </ul>
+        </article>
+
+        <!-- WEEKLY PROGRESS -->
+        <article class="weekly">
+            <h2>Weekly Target</h2>
+
+            <div class="progress">
+                <div class="bar" style="width:50%"></div>
+            </div>
+
+            <p>5 / 10 Tasks Completed</p>
+        </article>
+
+    </section>
+
+</main>
+
+<!-- Logout Popup -->
+<section id="logoutModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>Are you sure?</h3>
+        <p>You will be logged out of PrepTrack.</p>
+
+        <div class="modal-actions">
+            <a href="landing.html" class="confirm">Yes, Logout</a>
+            <a href="#" class="cancel">Cancel</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

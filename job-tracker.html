@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+
+    <link rel="stylesheet" href="job-tracker.css">
+    <link rel="stylesheet" href="logout.css">
+
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>PrepTrack</h2>
+
+    <nav>
+        <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+        <a href="#" class="active"><i class="fa-solid fa-briefcase"></i> Jobs</a>
+        <a href="prep.html"><i class="fa-solid fa-book"></i> Preparation</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+    </nav>
+
+    <div class="logout">
+        <a href="#logoutModal"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <h1>Job Tracker</h1>
+        <a href=""><button class="add-btn"><i class="fa-solid fa-plus"></i> Add Job</button></a>
+    </header>
+
+    
+
+    <!-- FILTERS -->
+    <section class="filters">
+        <button class="active">All</button>
+        <button>Applied</button>
+        <button>Interview</button>
+        <button>Offer</button>
+        <button>Rejected</button>
+    </section>
+
+    <!-- JOB LIST -->
+    <section class="jobs">
+
+        <article class="job-card">
+            <div>
+                <h3>TCS</h3>
+                <p>Data Analyst</p>
+            </div>
+            <div class="right">
+                <span class="status applied">Applied</span>
+
+                <div class="actions">
+                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            
+        </article>
+
+        <article class="job-card">
+            <div>
+                <h3>Infosys</h3>
+                <p>System Engineer</p>
+            </div>
+            <div class="right">
+                <span class="status interview">Interview</span>
+
+                <div class="actions">
+                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </article>
+
+        <article class="job-card">
+            <div>
+                <h3>Wipro</h3>
+                <p>Project Engineer</p>
+            </div>
+            <div class="right">
+                <span class="status rejected">Rejected</span>
+
+                <div class="actions">
+                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            
+        </article>
+
+        <article class="job-card">
+            <div>
+                <h3>Accenture</h3>
+                <p>Associate</p>
+            </div>
+            <div class="right">
+                <span class="status offer">Offer</span>
+
+                <div class="actions">
+                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+            
+        </article>
+
+    </section>
+
+</main>
+
+<section id="logoutModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>Are you sure?</h3>
+        <p>You will be logged out of PrepTrack.</p>
+
+        <div class="modal-actions">
+            <a href="landing.html" class="confirm">Yes, Logout</a>
+            <a href="#" class="cancel">Cancel</a>
+        </div>    
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<!-- <section id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <a href="#" class="close">&times;</a>
+
+        <h2>Add Job</h2>
+
+        <form>
+            <label>Company</label>
+            <input type="text" placeholder="Enter company">
+
+            <label>Role</label>
+            <input type="text" placeholder="Enter role">
+
+            <label>Platform</label>
+            <input type="text" placeholder="LinkedIn / Naukri / Referral">
+
+            <label>Status</label>
+            <select>
+                <option>Applied</option>
+                <option>Interview</option>
+                <option>Offer</option>
+                <option>Rejected</option>
+            </select>
+
+            <button type="submit">Save</button>
+        </form>
+
+    </div>
+
+</section> -->
+
+</body>
+</html>

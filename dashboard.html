@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="logout.css">
+    
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <h2 class="logo">PrepTrack</h2>
+
+    <nav>
+        <a href="#" class="active"><i class="fa-solid fa-house"></i> Dashboard</a>
+        <a href="job-tracker.html"><i class="fa-solid fa-briefcase"></i> Jobs</a>
+        <a href="prep.html"><i class="fa-solid fa-book"></i> Preparation</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+    </nav>
+
+    <!-- LOGOUT -->
+    <div class="logout">
+        <a href="#logoutModal"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <h1>Dashboard</h1>
+        <p>Welcome back, Shruti 👋</p>
+    </header>
+
+    <!-- STATS -->
+    <section class="cards">
+
+        <article class="card">
+            <i class="fa-solid fa-paper-plane"></i>
+            <h3>24</h3>
+            <p>Applications</p>
+        </article>
+
+        <article class="card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>5</h3>
+            <p>Interviews</p>
+        </article>
+
+        <article class="card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>2</h3>
+            <p>Offers</p>
+        </article>
+
+        <article class="card">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h3>8</h3>
+            <p>Rejected</p>
+        </article>
+
+    </section>
+
+    <!-- GRID -->
+    <section class="grid">
+
+        <!-- ACTIVITY -->
+        <article class="box">
+            <h3>Recent Activity</h3>
+            <ul>
+                <li>Applied to TCS - Data Analyst</li>
+                <li>Interview at Infosys scheduled</li>
+                <li>Completed DSA Arrays</li>
+            </ul>
+        </article>
+
+        <!-- PROGRESS -->
+        <article class="box">
+            <h3>Preparation Progress</h3>
+
+            <div class="progress">
+                <p>DSA <span>70%</span></p>
+                <div class="bar"><span style="width:70%"></span></div>
+            </div>
+
+            <div class="progress">
+                <p>Aptitude <span>50%</span></p>
+                <div class="bar"><span style="width:50%"></span></div>
+            </div>
+
+            <div class="progress">
+                <p>CS Core <span>40%</span></p>
+                <div class="bar"><span style="width:40%"></span></div>
+            </div>
+
+        </article>
+
+    </section>
+
+</main>
+<section id="logoutModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>Are you sure?</h3>
+        <p>You will be logged out of PrepTrack.</p>
+
+        <div class="modal-actions">
+            <a href="landing.html" class="confirm">Yes, Logout</a>
+            <a href="#" class="cancel">Cancel</a>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
