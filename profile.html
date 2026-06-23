@@ -6,7 +6,7 @@
     <title>Profile</title>
 
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="logout.css">
+    
 
     <!-- Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,31 +25,47 @@
         <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
         <a href="job-tracker.html"><i class="fa-solid fa-briefcase"></i> Jobs</a>
         <a href="prep.html"><i class="fa-solid fa-book"></i> Preparation</a>
-        <a href="#" class="active"><i class="fa-solid fa-user"></i> Profile</a>
+        <a href="" class="active"><i class="fa-solid fa-user"></i> Profile</a>
     </nav>
 
-    <div class="logout">
-        <a href="#logoutModal"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-    </div>
+    <button class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
 </aside>
 
 <!-- MAIN -->
 <main class="main">
 
-    <!-- PROFILE HEADER -->
-    <section class="profile-header">
+    <!-- PROFILE HEADER  -->
+    <section id="profile-header" class="profile-details" >
+        
+        <section id="profile">
+            <div id="profile-pic">
+                <!-- <input type="image" > -->
+                <img src="./v1_prepPage.png" alt="Profile" height="100px" width="100px" class="img">
+                    <a href="#modal" class="edit"><i class="fa-solid fa-plus"></i></a>
 
-        <img src="https://via.placeholder.com/100" alt="Profile">
+            </div>
 
-        <div>
-            <h2>Shruti Desai</h2>
-            <p>Aspiring Data Analyst</p>
-        </div>
+            <div>
+                <h1 class="name">Shruti Desai</h1>
+                <h4 class="job-role">Aspiring Data Analyst</h4>
+                <article id="contact">
+                    <p><i class="fa-regular fa-envelope"></i> shruti20@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9404756952</p>
+                    <p><i class="fa-solid fa-location-pin"></i> Pune</p>
 
+                    
+                    
+                </article>
+            </div>
+            
+        </section>
+        <a href="#editForm" id="editBtn"><i class="fa-regular fa-pen-to-square"></i></a>
     </section>
 
     <!-- STATS -->
-    <section class="stats">
+    <!-- <section class="stats">
 
         <article>
             <h3>20</h3>
@@ -66,84 +82,213 @@
             <p>Offers</p>
         </article>
 
+    </section> -->
+
+    <!-- Profile -->
+    <section class="profile-details">
+
+        <div class="box-head">
+            <h2>Profile</h2>
+            <a href="#editForm" id="editBtn"><i class="fa-regular fa-pen-to-square"></i></a>
+        </div>
+        <section class="academic-details">
+            <div class="academics" id="edu">
+                <h3>Education</h3>
+                <article class="boxes">
+                    <p>B.Tech, Artificial Intelligence & Data Science</p>
+                    <div>
+                        Dr. Babasaheb Ambedkar technological University, Lonere
+                      <ul>
+        
+                        <li>December 2021 - June 2025</li>
+                        <li>CGPA: 7.1</li>
+                      </ul>  
+                    </div>
+
+                </article>
+            </div>
+            <div class="academics" id="exp">
+        
+                <h3>Work Experience</h3>
+                <article class="boxes">
+                    <p>Associate Software Engineer</p>
+                    <div>
+                        IBM
+                      <ul>
+        
+                        <li>December 2025 - Present</li>
+                        <li>Pune</li>
+                      </ul>  
+                    </div>
+
+                </article>
+            </div>
+            <div class="academics" id="certs">
+        
+                <h3>Certifications</h3>
+                <article class="boxes">
+                    <p>Associate Software Engineer</p>
+                    <div>
+                        IBM
+                      <ul>
+        
+                        <li>December 2025 - Present</li>
+                        <li>Pune</li>
+                      </ul>  
+                    </div>
+
+                </article>
+            </div>            
+            <div class="academics" id="skills">
+        
+                <h3>Skills</h3>
+                <article class="boxes">
+                    <p>Associate Software Engineer</p>
+                    <div>
+                        IBM
+                      <ul>
+        
+                        <li>December 2025 - Present</li>
+                        <li>Pune</li>
+                      </ul>  
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
     </section>
 
-    <!-- EDIT FORM -->
-    <section class="profile-form">
-
-        <h2>Edit Profile</h2>
-
-        <form>
-
-            <label>Name</label>
-            <input type="text" value="Shruti Desai">
-
-            <label>Email</label>
-            <input type="email" value="shruti@email.com">
-
-            <label>Target Role</label>
-            <input type="text" placeholder="Data Analyst">
-
-            <label>Goal</label>
-            <textarea placeholder="Your preparation goal..."></textarea>
-
-            <button>Save Changes</button>
-
-        </form>
-
+    <section id="resume-links">
+        <section class="profile-details">
+            <div class="box-head">
+                <h2>Resume</h2>
+                <a href="#editForm" id="editBtn"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            <div class="item" id="resume">
+                <a href="file-upload">Resume file name</a>
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </section>
+        <section class="profile-details">
+            <div class="box-head">
+                <h2>Links</h2>
+                <a href="#editForm" id="editBtn"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            <div class="item" id="links">
+                <p><span>Github: </span><a href="link">href</a></p>
+                <i class="fa-solid fa-link"></i>
+            </div>
+            <hr>
+            <div class="item" id="links">
+                <p><span>LinkedIn: </span><a href="link">href</a></p>
+                <i class="fa-solid fa-link"></i>
+            </div>
+        </section>
     </section>
-
 </main>
 
+<!-- Logout alert Box -->
+<section id="logoutModal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>Are you sure?</h3>
+        <p>You will be logged out of PrepTrack.</p>
+
+        <div class="modal-actions">
+            <a href="landing.html" class="confirm">Yes, Logout</a>
+            <a href="#" class="cancel">Cancel</a>
+        </div>    
+    </div>
+</section>
+
+<!-- AddJob Form -->
+<section id="addJob" class="modal">
+
+    <div class="modal-content">
+
+        <!-- <a href="#" class="close">&times;</a> -->
+
+        <h2>Add Job</h2> <br>
+
+        <form class="form">
+            <label for="company">Company</label> 
+            <input class="input" type="text" id="company" placeholder="Enter company" required> 
+
+            <label for="role">Role</label> 
+            <input class="input" type="text" id="role" name="job-role" placeholder="Enter role" required>
+
+            <label for="skills">Skills</label> 
+            <input class="input" type="search" id="website" name="website" placeholder="Add skills mentioned in job description"> 
+
+            <label for="DOA">Date of application </label> 
+            <input class="input" type="date" id="DOA" name="DOA" >
+
+            <label for="location">Location</label> 
+            <input class="input" type="text" id="location" name="website" placeholder="Enter loaction if mentioned">
+
+            <label for="website">Platform</label> 
+            <input class="input" type="text" id="website" name="website" placeholder="LinkedIn / Naukri / Referral" required> 
+
+            <label for="status">Status</label> 
+            <select class="input" id="status" name="status">
+                <option>Select status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select><br>
+            <div class="button"> 
+                <a href=""><button type="submit" id="saveBtn">Save</button></a>
+                <a href=""><button type="button">Cancel</button></a>
+            </div>
+        </form>
+
+    </div>
+
+</section>
+<section id="editForm" class="modal">
+    <div class="modal-content">
+        <form class="form">
+            
+
+            <label for="company">Company</label> 
+            <input class="input" type="text" id="company" placeholder="Enter company" required> 
+
+            <label for="role">Role</label> 
+            <input class="input" type="text" id="role" name="job-role" placeholder="Enter role" required>
+
+            <label for="skills">Skills</label> 
+            <input class="input" type="search" id="website" name="website" placeholder="Add skills mentioned in job description"> 
+
+            <label for="DOA">Date of application </label> 
+            <input class="input" type="date" id="DOA" name="DOA" >
+
+            <label for="location">Location</label> 
+            <input class="input" type="text" id="location" name="website" placeholder="Enter loaction if mentioned">
+
+            <label for="website">Platform</label> 
+            <input class="input" type="text" id="website" name="website" placeholder="LinkedIn / Naukri / Referral" required> 
+
+            <label for="status">Status</label> 
+            <select class="input" id="status" name="status">
+                <option>Select status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select><br>
+            <div class="button"> 
+                <a href=""><button type="submit" id="saveBtn">Save</button></a>
+                <a href=""><button type="button">Cancel</button></a>
+            </div>
+        </form>
+    </div>
+</section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="file.js"></script>
 </body>
 </html>

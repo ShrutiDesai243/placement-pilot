@@ -40,7 +40,7 @@
     <!-- HEADER -->
     <header class="topbar">
         <h1>Job Tracker</h1>
-        <a href=""><button class="add-btn"><i class="fa-solid fa-plus"></i> Add Job</button></a>
+        <a href="#addJob"><button class="add-btn"><i class="fa-solid fa-plus"></i> Add Job</button></a>
     </header>
 
     
@@ -124,6 +124,7 @@
 
 </main>
 
+<!-- Logout alert Box -->
 <section id="logoutModal" class="modal">
 
     <div class="modal-content">
@@ -136,42 +137,55 @@
             <a href="#" class="cancel">Cancel</a>
         </div>    
     </div>
-
 </section>
 
-<!-- MODAL -->
-<!-- <section id="modal" class="modal">
+<!-- AddJob Form -->
+<section id="addJob" class="modal">
 
     <div class="modal-content">
 
-        <a href="#" class="close">&times;</a>
+        <!-- <a href="#" class="close">&times;</a> -->
 
-        <h2>Add Job</h2>
+        <h2>Add Job</h2> <br>
 
-        <form>
-            <label>Company</label>
-            <input type="text" placeholder="Enter company">
+        <form class="form">
+            <label for="company">Company</label> 
+            <input class="input" type="text" id="company" placeholder="Enter company" required> 
 
-            <label>Role</label>
-            <input type="text" placeholder="Enter role">
+            <label for="role">Role</label> 
+            <input class="input" type="text" id="role" name="job-role" placeholder="Enter role" required>
 
-            <label>Platform</label>
-            <input type="text" placeholder="LinkedIn / Naukri / Referral">
+            <label for="skills">Skills</label> 
+            <input class="input" type="search" id="website" name="website" placeholder="Add skills mentioned in job description"> 
 
-            <label>Status</label>
-            <select>
-                <option>Applied</option>
-                <option>Interview</option>
-                <option>Offer</option>
-                <option>Rejected</option>
-            </select>
+            <label for="DOA">Date of application </label> 
+            <input class="input" type="date" id="DOA" name="DOA" >
 
-            <button type="submit">Save</button>
+            <label for="location">Location</label> 
+            <input class="input" type="text" id="location" name="website" placeholder="Enter loaction if mentioned">
+
+            <label for="website">Platform</label> 
+            <input class="input" type="text" id="website" name="website" placeholder="LinkedIn / Naukri / Referral" required> 
+
+            <label for="status">Status</label> 
+            <select class="input" id="status" name="status">
+                <option>Select status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select><br>
+            <div class="button"> 
+                <a href=""><button type="submit" id="saveBtn">Save</button></a>
+                <a href=""><button type="button">Cancel</button></a>
+            </div>
         </form>
 
     </div>
 
-</section> -->
+</section>
+
+    <script src="file.js"></script>
 
 </body>
 </html>

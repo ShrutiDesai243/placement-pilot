@@ -30,7 +30,7 @@ body{
     display:flex;
     flex-direction:column;
     gap:12px;
-    margin-top: -170px;    
+    margin-top: -125px;    
 }
 
 .sidebar a{
@@ -50,7 +50,7 @@ body{
 
 .sidebar a:hover,
 .sidebar .active{
-    background:linear-gradient(90deg,#0ea5e9,#6366f1);
+    background:rgb(109, 70, 182);
     color:white;
 }
 
@@ -75,7 +75,7 @@ body{
 
 /* ADD BUTTON */
 .add-btn{
-    background:linear-gradient(to right,#0ea5e9,#6366f1);
+    background:rgb(133, 95, 204);
     color:white;
     border:none;
     padding:10px 15px;
@@ -102,13 +102,9 @@ body{
     cursor:pointer;
 }
 
-.filters button:hover{
-    background:#0ea5e9;
-    color:white;
-}
-
+.filters button:hover,
 .filters .active{
-    background:#0ea5e9;
+    background:rgb(133, 95, 204);
     color:white;
 }
 
@@ -162,22 +158,143 @@ body{
 
 /* COLORS */
 .applied{
-    background:#dbeafe;
+    background:#2564eb27;
     color:#2563eb;
 }
 
 .interview{
-    background:#fef3c7;
+    background:#d9770627;
     color:#d97706;
 }
 
 .offer{
-    background:#dcfce7;
+    background:#16a34a27;
     color:#16a34a;
 }
 
 .rejected{
-    background:#fee2e2;
+    background:#dc262627;
     color:#dc2626;
 }
 
+
+
+/* AddJob form */
+
+/* logout form */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.modal:target{
+    pointer-events:auto;
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* MODAL BOX */
+.modal-content{
+    margin: 40px 0;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    width:90%;
+    max-width: 500px;
+    max-height: calc(100vh - 50px); 
+    font-size: 14px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.modal-content h2:first-child{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    /* background-color: grey; */
+}
+
+.form>.input{
+    /* width: 100%; */
+    height: 30px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.815);
+    border-radius: 5px;
+    /* outline: none; */
+}
+
+.Bottom-flex{
+    display: flex;
+}
+
+.form .button{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 10px;
+}
+
+.button button{
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 0, 0.726);
+    color: black;
+    text-align: center;
+}
+
+#saveBtn{
+    background-color: rgba(255, 255, 0, 0.527);
+    color: grey;
+}
+
+
+/* ACTION BUTTONS */
+.modal-actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.confirm{
+    background:#ef4444;
+    color:white;
+    padding:8px 8px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+.confirm:hover{
+    background:#eb2e2e;
+
+}
+
+.cancel{
+    background:#e2e8f0;
+    padding:8px 8px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#333;
+}
+
+.cancel:hover{
+    background-color: #3333332d;
+}

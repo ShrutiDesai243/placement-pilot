@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Plan</title>
+
+    <!-- <link rel="stylesheet" href="setup.css"> -->
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+    /* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* BODY */
+body{
+    display:flex;
+    background:#f1f5f9;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    position:fixed;
+    padding:25px;
+}
+
+.sidebar nav{
+    margin-top:30px;
+}
+
+.sidebar a{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    color:#cbd5f5;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+}
+
+.sidebar a:hover{
+    background:linear-gradient(to right,#0ea5e9,#6366f1);
+    color:white;
+}
+
+/* MAIN */
+.main{
+    margin-left:240px;
+    padding:30px;
+    width:100%;
+}
+
+/* HEADER */
+.topbar h1{
+    font-size:26px;
+}
+
+.topbar p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+/* CONTAINER */
+.setup-container{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+}
+
+/* CARD */
+.setup-box{
+    width:100%;
+    max-width:500px;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* TITLE */
+.setup-box h2{
+    margin-bottom:20px;
+}
+
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* INPUT */
+input{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #cbd5e1;
+}
+
+input:focus{
+    outline:none;
+    border-color:#6366f1;
+}
+
+/* BUTTON */
+.generate-btn{
+    margin-top:10px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(to right,#0ea5e9,#6366f1);
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.generate-btn:hover{
+    transform:translateY(-2px);
+}
+</style>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>PrepTrack</h2>
+
+    <nav>
+        <a href="#"><i class="fa-solid fa-rocket"></i> Setup Plan</a>
+    </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <h1>Setup Your Placement Plan</h1>
+        <p>Tell us your goal. We’ll guide your journey 🚀</p>
+    </header>
+
+    <!-- FORM CARD -->
+    <section class="setup-container">
+
+        <article class="setup-box">
+
+            <h2>Create Your Plan</h2>
+
+            <form id="setupForm">
+
+                <!-- ROLE -->
+                <label>🎯 Target Role</label>
+                <input type="text" id="role" placeholder="e.g. Data Analyst" required>
+
+                <!-- MONTHS -->
+                <label>⏳ Timeline (Months)</label>
+                <input type="number" id="months" min="1" max="12" value="3" required>
+
+                <!-- DAYS -->
+                <label>📅 Days per Week</label>
+                <input type="number" id="days" min="1" max="7" value="5" required>
+
+                <!-- HOURS -->
+                <label>⏱ Hours per Day</label>
+                <input type="number" id="hours" min="1" max="12" value="4" required>
+
+                <!-- BUTTON -->
+                <button type="submit" class="generate-btn">
+                    Generate My Plan 🚀
+                </button>
+                
+
+            </form>
+
+        </article>
+
+    </section>
+
+</main>
+
+<script src="file.js"></script>
+ 
+</body>
+</html>

@@ -58,7 +58,7 @@
 .register-form button{
     padding:12px;
     border:none;
-    background:#0ea5e9;
+    background:rgb(109, 70, 182);
     color:white;
     border-radius:8px;
     cursor:pointer;
@@ -69,7 +69,7 @@
 
 /* BUTTON HOVER */
 .register-form button:hover{
-    background:#0284c7;
+    background:rgb(71, 30, 148);
 }
 
 .register-form button>a{
@@ -79,6 +79,5 @@
 
 /* LINK */
 .register-form a{
-    color:#0ea5e9;
     text-decoration:none;
 }

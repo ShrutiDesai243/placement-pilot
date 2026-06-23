@@ -37,60 +37,35 @@
 
 </aside>
 
+
 <!-- MAIN -->
 <main class="main">
 
     <!-- HEADER -->
     <header class="topbar">
         <h1>Dashboard</h1>
-        <p>Welcome back, Shruti 👋</p>
+        <p>Welcome back, Shruti !</p>
     </header>
 
-    <!-- STATS -->
-    <section class="cards">
+    <!-- ================= TOP PRIORITY ================= -->
+    <section class="top-section">
 
-        <article class="card">
-            <i class="fa-solid fa-paper-plane"></i>
-            <h3>24</h3>
-            <p>Applications</p>
-        </article>
-
-        <article class="card">
-            <i class="fa-solid fa-calendar-check"></i>
-            <h3>5</h3>
-            <p>Interviews</p>
-        </article>
-
-        <article class="card">
-            <i class="fa-solid fa-circle-check"></i>
-            <h3>2</h3>
-            <p>Offers</p>
-        </article>
-
-        <article class="card">
-            <i class="fa-solid fa-circle-xmark"></i>
-            <h3>8</h3>
-            <p>Rejected</p>
-        </article>
-
-    </section>
-
-    <!-- GRID -->
-    <section class="grid">
-
-        <!-- ACTIVITY -->
-        <article class="box">
-            <h3>Recent Activity</h3>
+        <!-- TODAY TASKS -->
+        <article class="box tasks-box">
+            <div class="task-header">
+                <h3>Today's Tasks</h3>
+                <span class="task-progress">0 / 3 completed</span>
+            </div>
             <ul>
-                <li>Applied to TCS - Data Analyst</li>
-                <li>Interview at Infosys scheduled</li>
-                <li>Completed DSA Arrays</li>
+                <li><input type="checkbox"> Solve 5 DSA questions</li>
+                <li><input type="checkbox"> Revise DBMS</li>
+                <li><input type="checkbox"> Practice Aptitude</li>
             </ul>
         </article>
 
         <!-- PROGRESS -->
         <article class="box">
-            <h3>Preparation Progress</h3>
+            <h3>Skill Progress</h3>
 
             <div class="progress">
                 <p>DSA <span>70%</span></p>
@@ -111,6 +86,48 @@
 
     </section>
 
+    <!-- ================= STATS ================= -->
+    <section class="cards">
+
+        <article class="card">
+            <i class="fa-solid fa-paper-plane"></i>
+            <h3>24</h3>
+            <p>Applications</p>
+        </article>
+
+        <article class="card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>5</h3>
+            <p>Interviews</p>
+        </article>
+
+        <article class="card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>2</h3>
+            <p>Offers</p>
+        </article>
+
+        <!-- NEW STREAK CARD -->
+        <article class="card">
+            <i class="fa-solid fa-fire"></i>
+            <h3>5 Days</h3>
+            <p>Current Streak</p>
+        </article>
+
+    </section>
+
+    <!-- ================= ACTIVITY ================= -->
+    <section class="activity-section">
+        <article class="box">
+            <h3>Recent Activity</h3>
+            <ul type="none">
+                <li>Applied to TCS - Data Analyst</li>
+                <li>Interview at Infosys scheduled</li>
+                <li>Completed DSA Arrays</li>
+            </ul>
+        </article>
+    </section>
+
 </main>
 <section id="logoutModal" class="modal">
 
@@ -127,6 +144,8 @@
     </div>
 
 </section>
+
+    <script src="file.js"></script>
 
 </body>
 </html>

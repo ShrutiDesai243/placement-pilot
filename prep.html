@@ -6,7 +6,6 @@
     <title>Preparation</title>
 
     <link rel="stylesheet" href="prep.css">
-    <link rel="stylesheet" href="logout.css">
 
     <!-- Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,123 +23,165 @@
     <nav>
         <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
         <a href="job-tracker.html"><i class="fa-solid fa-briefcase"></i> Jobs</a>
-        <a href="#" class="active"><i class="fa-solid fa-book"></i> Preparation</a>
-        <a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+        <a href="" class="active"><i class="fa-solid fa-book"></i> Preparation</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
     </nav>
 
-    <div class="logout">
-        <a href="#logoutModal"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-    </div>
+    <button class="logout-btn" id="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
 </aside>
 
 <!-- MAIN -->
 <main class="main">
 
-    <!-- HEADER -->
+    <!-- PAGE HEADER -->
     <header class="topbar">
-        <h1>Preparation Tracker</h1>
+        <h1>Daily Plan</h1>
+        <p>Follow the plan. Stay consistent. 🚀</p>
     </header>
 
-    <!-- SECTION -->
-    <section class="prep-container">
+    <!-- MAIN LAYOUT -->
+    <section class="plan-container">
 
-        <!-- DSA -->
-        <article class="prep-card">
-            <h2>DSA</h2>
+        <!-- ================= TASKS SECTION ================= -->
+        <section class="tasks-section">
 
-            <div class="progress">
-                <div class="bar" style="width:60%"></div>
-            </div>
-            <p class="percent">60% Completed</p>
+            <section class="roadmap-box">
 
-            <ul>
-                <li><input type="checkbox" checked> Arrays</li>
-                <li><input type="checkbox" checked> Strings</li>
-                <li><input type="checkbox"> Linked List</li>
-                <li><input type="checkbox"> Trees</li>
-            </ul>
-        </article>
+                <div>
+                    <h3 id="targetRole">Data Analyst</h3>
+                    <p>Target Role</p>
+                </div>
 
-        <!-- APTITUDE -->
-        <article class="prep-card">
-            <h2>Aptitude</h2>
+                <div>
+                    <h3 id="remainingDays">72</h3>
+                    <p>Days Left</p>
+                </div>
 
-            <div class="progress">
-                <div class="bar" style="width:40%"></div>
-            </div>
-            <p class="percent">40% Completed</p>
+                <div>
+                    <h3 id="studyHours">4 hrs/day</h3>
+                    <p>Study Goal</p>
+                </div>
 
-            <ul>
-                <li><input type="checkbox" checked> Quantitative</li>
-                <li><input type="checkbox"> Logical</li>
-                <li><input type="checkbox"> Verbal</li>
-            </ul>
-        </article>
+                <div>
+                    <h3 id="weeklyGoal">5 Days</h3>
+                    <p>Weekly Target</p>
+                </div>
 
-        <!-- CORE -->
-        <article class="prep-card">
-            <h2>Core Subjects</h2>
+            </section>
 
-            <div class="progress">
-                <div class="bar" style="width:70%"></div>
-            </div>
-            <p class="percent">70% Completed</p>
+            <header class="tasks-header">
+            
+                <div class="header-left">
+                    
+                    <h2>Today's Tasks</h2>
 
-            <ul>
-                <li><input type="checkbox" checked> DBMS</li>
-                <li><input type="checkbox" checked> OS</li>
-                <li><input type="checkbox"> CN</li>
-                <li><input type="checkbox" checked> SQL</li>
-            </ul>
-        </article>
+                    <!-- <p class="focus-text">
+                        🎯 Focus: Placement Preparation
+                    </p> -->
+                    <p class="focus-text" id="todayFocus">
+                    Loading today's focus...
+                    </p>
 
-    </section>
+                </div>
+                <!-- <a href="#addTask"><button class="add-btn">+ Add Task</button></a> -->
+            </header>
 
-    <!-- Time Track -->
-    <section class="time-tracking">
-
-        <!-- TODAY TASKS -->
-        <article class="today">
-            <h2>Today's Plan</h2>
-
-            <ul>
-                <li><input type="checkbox"> Solve 5 DSA questions</li>
-                <li><input type="checkbox"> Revise DBMS</li>
-                <li><input type="checkbox"> Practice Aptitude</li>
-            </ul>
-        </article>
-
-        <!-- WEEKLY PROGRESS -->
-        <article class="weekly">
-            <h2>Weekly Target</h2>
-
-            <div class="progress">
-                <div class="bar" style="width:50%"></div>
+            <!-- PROGRESS -->
+            <p id="taskProgress" class="task-progress">0/0 tasks completed</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
             </div>
 
-            <p>5 / 10 Tasks Completed</p>
-        </article>
+            <!-- STREAK RULE -->
+            <p class="streak-rule">
+                ✅ Complete at least <strong>3 tasks</strong> to maintain your streak
+            </p>
+
+            <!-- TASK LIST -->
+            <section class="task-list" id="taskList">
+
+                <!-- <article class="task">
+
+                    <div class="task-left">
+                        <input type="checkbox" checked>
+                        <span>Solve 2 DSA questions</span>
+                    </div>
+
+                    <div class="task-right">
+                        <span class="duration">45 mins</span>
+                        <span class="priority high">High</span>
+                        <span class="tag dsa">DSA</span>
+                    </div>
+
+                </article> -->
+
+                
+
+            </section>
+
+        </section>
+
+        <!-- ================= SIDE SECTION ================= -->
+        <aside class="side-section">
+
+            <!-- DATE -->
+            <article class="box">
+                <h3>Today</h3>
+                <p id="currentDate">Loading...</p>
+                <label for="hours" >Daily Study Hours: </label>
+                <input type="number" name="hours" class="time-input" id="hours" min="1" max="12" value="4">
+                
+            </article>
+
+            <!-- STREAK -->
+            <article class="box streak-box">
+                <h3>🔥 Current Streak</h3>
+                <p class="streak-count" id="streakCount">0 Days</p>
+                <p>Keep going! You're consistent 💪</p>
+            </article>
+
+            <!-- WEEKLY PROGRESS -->
+            <article class="box">
+
+                <h3>Weekly Progress</h3>
+
+                <p id="weekProgressText">
+                    0%
+                </p>
+
+                <div class="progress-bar">
+                    <div id="weekProgressBar" class="progress-fill"></div>
+                </div>
+
+            </article>
+
+            <!-- SUBJECT PROGRESS -->
+            <article class="box">
+
+                <h3>Subject Progress</h3>
+                <div id="subjectProgressContainer">
+                    <!-- <p>DSA <span id="dsaPercent">0%</span></p>
+                    <p>SQL <span id="sqlPercent">0%</span></p>
+                    <p>Aptitude <span id="aptitudePercent">0%</span></p>
+                    <p>Projects <span id="projectPercent">0%</span></p> -->
+                </div>
+            </article>
+
+            <!-- WARNING -->
+            <article class="box warning">
+                <h3>⚠ Reminder</h3>
+                <p>Miss tasks → streak may reset</p>
+            </article>
+
+        </aside>
 
     </section>
 
 </main>
 
-<!-- Logout Popup -->
-<section id="logoutModal" class="modal">
 
-    <div class="modal-content">
-
-        <h3>Are you sure?</h3>
-        <p>You will be logged out of PrepTrack.</p>
-
-        <div class="modal-actions">
-            <a href="landing.html" class="confirm">Yes, Logout</a>
-            <a href="#" class="cancel">Cancel</a>
-        </div>
-
-    </div>
-
-</section>
-
+<script src="file.js"></script>
 </body>
 </html>

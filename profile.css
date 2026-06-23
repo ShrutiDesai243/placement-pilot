@@ -15,19 +15,20 @@ body{
 .sidebar{
     width:240px;
     height:100vh;
-    background:#0f172a;
+    background:#0f172afa;
     color:white;
     position:fixed;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     padding:25px;
+    z-index: 10;
 }
 
 .sidebar nav{
     display:flex;
     flex-direction:column;
-    margin-top: -170px;
+    margin-top: -125px;
     gap:12px;
 }
 
@@ -43,8 +44,8 @@ body{
 
 .sidebar a:hover,
 .sidebar .active{
-    background:linear-gradient(to right,#0ea5e9,#6366f1);
-    color:white;
+    background: rgb(109, 70, 182);
+    color:rgb(255, 255, 255);
 }
 
 .sidebar a i{
@@ -61,29 +62,73 @@ body{
     margin-left:240px;
     padding:30px;
     width:100%;
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-around; */
+    flex-direction: column;
 }
 
 /* PROFILE HEADER */
-.profile-header{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    background:white;
-    padding:20px;
-    border-radius:14px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.05);
-    margin-bottom:20px;
+
+#profile-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.profile-header img{
+.img{
+    position: relative;
+    /* top: 10px; */
     border-radius:50%;
 }
+
+#profile-pic .edit{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    box-shadow:0px 0px 3px .2px rgba(0, 0, 0, 0.034);
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    border-radius: 50%;
+    position: absolute;
+    top: 130px;
+    left: 360px;
+}
+
+#profile-pic i{
+    position: absolute;
+    left: 2.5px;
+    top: 2px;
+    color: black;
+}
+
+#profile{
+    display: flex;
+    gap: 40px;
+}
+
+#contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 14px;
+    gap: 50px;
+}
+
+#profile div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+
 
 /* STATS */
 .stats{
     display:flex;
     gap:20px;
-    margin-bottom:20px;
+    /* margin-bottom:20px; */
 }
 
 .stats article{
@@ -100,16 +145,80 @@ body{
     color:#0ea5e9;
 }
 
-/* FORM */
-.profile-form{
+/* Profile Details */
+.profile-details{
     background:white;
     padding:20px;
     border-radius:14px;
     box-shadow:0 6px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-form{
-    display:flex;
+.profile-details i{
+    font-size: 14px;
+}
+.box-head{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.academic-details{
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;    
+}
+
+.academics{
+    /* width: 40%; */
+    border: 0.5px solid #cbd5f5;
+    box-shadow:0px 1px 3px 3px #dde2f363;
+    border-radius: 5px;
+    display: flex;
+    padding:10px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.boxes>p{
+    font-size: 12px;
+    font-weight: 900 ;
+}
+.boxes div{
+    display: flex;
+    font-size: 10px;
+    gap: 10px;
+}
+
+.boxes div>ul{
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-evenly; */
+    list-style: none;
+}
+#resume-links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: space-between;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.item i{
+    font-size: 10px;
+}
+
+/* FORM */
+/* form{
+    display:none;
     flex-direction:column;
     gap:10px;
 }
@@ -133,4 +242,124 @@ button{
     color:white;
     border-radius:8px;
     cursor:pointer;
+} */
+
+/* AddJob form */
+
+/* logout form */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.modal:target{
+    pointer-events:auto;
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* MODAL BOX */
+.modal-content{
+    margin: 40px 0;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    width:90%;
+    max-width: 500px;
+    max-height: calc(100vh - 50px); 
+    font-size: 14px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.modal-content h2:first-child{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    /* background-color: grey; */
+}
+
+.form>.input{
+    /* width: 100%; */
+    height: 30px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.815);
+    border-radius: 5px;
+    /* outline: none; */
+}
+
+.Bottom-flex{
+    display: flex;
+}
+
+.form .button{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 10px;
+}
+
+.button button{
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 0, 0.726);
+    color: black;
+    text-align: center;
+}
+
+#saveBtn{
+    background-color: rgba(255, 255, 0, 0.527);
+    color: grey;
+}
+
+
+/* ACTION BUTTONS */
+.modal-actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.confirm{
+    background:#ef4444;
+    color:white;
+    padding:8px 8px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+.confirm:hover{
+    background:#eb2e2e;
+
+}
+
+.cancel{
+    background:#e2e8f0;
+    padding:8px 8px;
+    border-radius:10px;
+    text-decoration:none;
+    color:#333;
+}
+
+.cancel:hover{
+    background-color: #3333332d;
 }

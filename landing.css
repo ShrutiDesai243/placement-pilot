@@ -28,7 +28,7 @@ body{
 }
 
 .nav a:hover{
-    color: #0ea5e9;
+    color: rgb(109, 70, 182);
 }
  
 /* HERO */
@@ -38,8 +38,8 @@ body{
     justify-content:space-between;
     align-items:center;
     text-align:left;
-    background:  url(./landing-bg.png) right/100% 90vh no-repeat;
-    /* background:linear-gradient(to right,#0ea5e9,#6366f1); */
+    background:  url(./landing-bg1.jpeg) right/100% 90vh no-repeat;
+    /* background:linear-gradient(45deg,#0ea5e9,#6366f1); */
     color:white;
 }
 
@@ -68,7 +68,7 @@ body{
 
 .btn{
     background:white;
-    color:#0ea5e9;
+    color:rgb(109, 70, 182);
     padding:10px 18px;
     border-radius:8px;
     text-decoration:none;
@@ -81,6 +81,11 @@ body{
     border-radius:8px;
     text-decoration:none;
     color:white;
+}
+
+.btn-outline:hover{
+    background-color: white;
+    color: rgb(109, 70, 182)
 }
 
 /* FEATURES */

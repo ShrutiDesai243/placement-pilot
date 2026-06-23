@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DO id= =""CTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,19 +11,22 @@
 
 <section class="login-container">
 
-    <form class="login-form">
+    <form class="login-form" id="loginForm">
         <h2>Login</h2>
 
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <a href="dashboard.html" class="login-btn"><button id="login">Login</button></a>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="password" type="password" placeholder="Password" required>
+        <button id="loginBtn" type="submit" class="login-btn">
+            Login
+        </button>
         <p>Don't have an account? <a href="register.html">Sign up</a></p>
     </form>
 
 </section>
 
+<script src="file.js"></script>
 </body>
 </html>
 
 
-
+ 
